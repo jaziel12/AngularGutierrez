@@ -1,0 +1,38 @@
+*{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.Container{
+width: 100%;
+height: 100%;
+/* margin: 40 auto; */
+display: grid;
+gap: 4px;
+/* grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr); */
+grid-template-areas:
+"element2 element2 element2 "
+"element1 element3 element3 "
+"element1 element3 element3 ";
+}
+
+.element1{
+height: 87vh;
+grid-area: element1;
+color:  #fffdff;
+/* align-items: center;
+justify-content: center; */
+}
+
+.element2{
+  height: 87vh;
+  grid-area: element3;
+
+}
+.element3{
+  height: 10vh;
+  grid-area: element2;
+}
