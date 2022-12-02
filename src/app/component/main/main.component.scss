@@ -18,3 +18,27 @@
 .fondo p{
   text-align: center;
 }
+
+.mainContainer{
+margin: auto;
+width: 100vw;
+}
+
+.table{
+  width: 100px;
+  height: 100px;
+  border-collapse: collapse;
+  background-color: aliceblue;
+  text-align: center;
+}
+.table th, td{
+  text-align: center;
+/* border: solid 1px black;
+ */padding: 20px;
+}
+.containterOne{
+  background-color: aqua;
+}
+.containerTwo{
+  background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.rdstation.com%2Fblog%2Fes%2Fbancos-de-imagenes%2F&psig=AOvVaw3YyCG5hvvvVHVRCZCzgMnt&ust=1669996519850000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCODN1Pzj2PsCFQAAAAAdAAAAABAE);
+}

@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  public students:string []= ['Jaziel', 'Joel', 'Jessica']
+  public correr= false;
+
 
   constructor() { }
 

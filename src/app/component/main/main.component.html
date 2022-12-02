@@ -1,3 +1,38 @@
 <div class="fondo" >
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ut amet illo fuga vel accusamus quia cum, repudiandae vero soluta facere praesentium suscipit dicta aliquam ratione quidem, iusto temporibus! Fugiat?</p>
+  <div class="mainContainer">
+<!--     <table class="table">
+--><!--       <thead>
+        <tr>
+          <th>Descipción</th> <th>Precio</th> <th>Mes</th>
+        </tr>
+      </thead> -->
+
+<!--   <tr>
+        <td *ngFor="let nombrePersona of students" >{{nombrePersona}}
+  </tr> -->
+
+  <div *ngIf="correr">
+    <ul>
+      <li [ngClass]="nombrePersona ?'containterOne':''"  [style.font-size]="correr ? '12px':'10px'" *ngFor="let nombrePersona of students">
+          Nombre: {{nombrePersona}}
+      </li>
+    </ul>
+    <!-- <tr>
+      <td   *ngFor="let nombrePersona of students" >{{nombrePersona}}
+  </tr>-->
+  </div>
+  <div class="boton">
+    <button (click)="correr=true"  >Activar</button>
+    <button (click)="correr=false" >Desactivar</button>
+  </div>
+
+
+<!-- </table>
+--></div>
+
+
 </div>
+
+
+
+
