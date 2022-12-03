@@ -1,38 +1,22 @@
-<div class="fondo" >
+<div class="fondo">
   <div class="mainContainer">
-<!--     <table class="table">
---><!--       <thead>
-        <tr>
-          <th>Descipción</th> <th>Precio</th> <th>Mes</th>
-        </tr>
-      </thead> -->
+    <H1 class="title">Estudiantes</H1>
+    <div *ngIf="correr">
+      <ul>
+        <li
+          [ngClass]="nombrePersona ? 'containterOne' : ''"
+          [style.font-size]="correr ? '12px' : '10px'"
+          *ngFor="let nombrePersona of students"
+        >
+          Nombre: {{ nombrePersona }}
+        </li>
+      </ul>
+    </div>
 
-<!--   <tr>
-        <td *ngFor="let nombrePersona of students" >{{nombrePersona}}
-  </tr> -->
-
-  <div *ngIf="correr">
-    <ul>
-      <li [ngClass]="nombrePersona ?'containterOne':''"  [style.font-size]="correr ? '12px':'10px'" *ngFor="let nombrePersona of students">
-          Nombre: {{nombrePersona}}
-      </li>
-    </ul>
-    <!-- <tr>
-      <td   *ngFor="let nombrePersona of students" >{{nombrePersona}}
-  </tr>-->
+    <div class="boton">
+      <button (click)="correr = true">Activar</button>
+      <button (click)="correr = false">Desactivar</button>
+      <p class="title">La fecha de hoy es: {{ hoy | date : "short" }}</p>
+    </div>
   </div>
-  <div class="boton">
-    <button (click)="correr=true"  >Activar</button>
-    <button (click)="correr=false" >Desactivar</button>
-  </div>
-
-
-<!-- </table>
---></div>
-
-
 </div>
-
-
-
-

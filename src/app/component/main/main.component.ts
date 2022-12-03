@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
   public students:string []= ['Jaziel', 'Joel', 'Jessica']
   public correr= false;
+  public hoy=new Date();
 
 
   constructor() { }
