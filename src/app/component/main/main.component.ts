@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -11,9 +12,20 @@ export class MainComponent implements OnInit {
   public hoy=new Date();
 
 
-  constructor() { }
+  //formulario
+public formularioPincipal: FormGroup;
+
+  constructor(public fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.formularioPincipal = this.fb.group({
+      nombre: ["",[Validators.required, Validators.maxLength(10)]],
+      edad: [0],
+      correo: ["fulano@gmail.com"],
+    });
   }
+submit(): void{
+console.log(this.formularioPincipal.value)
+}
 
 }

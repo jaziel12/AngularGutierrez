@@ -19,4 +19,13 @@
       <p class="title">La fecha de hoy es: {{ hoy | date : "short" }}</p>
     </div>
   </div>
+
+  <form [formGroup]="formularioPincipal" (ngSubmit)="submit()">
+    nombre: <input type="text" formControlName="nombre" required /> edad:
+    <input type="text" formControlName="edad" /> correo:
+    <input type="text" formControlName="correo" />
+    <button type="submit">Confirmar</button>
+  </form>
+{{formularioPincipal.valid ? "Valido" : "Invalido"}}
+  {{formularioPincipal.get("nombre")?.value | json}}
 </div>
